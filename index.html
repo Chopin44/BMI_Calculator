@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -18,21 +19,21 @@
         </section>
 
 
-        <form action="">
+        <form action="" id="submit">
             <section class="first">
-                <label for="">Put your weight in here</label>
-                <input type="text" name="" id="" style="font-size:24px">
+                <label for="">Put your weight in here (KG)</label>
+                <input type="text" name="" id="kilo" style="font-size:24px">
             </section>
             <section class="second">
-                <label for="">And your height in here</label>
-                <input type="text" name="" id="" style="font-size:24px">
+                <label for="">And your height in here (CM)</label>
+                <input type="text" name="" id="cm" style="font-size:24px">
                 <div>
-                    <button>Calculate BMI</button>
+                    <button type="submit">Calculate BMI</button>
                 </div>
 
             </section>
 
-
+            <h2 id="h1"></h2>
 
         </form>
 

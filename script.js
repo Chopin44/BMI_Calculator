@@ -4,15 +4,19 @@ let inputCm = document.getElementById("cm")
 let h1 = document.getElementById("h1")
 
 
-
-
 hasil.addEventListener("submit", (event) => {
     event.preventDefault()
+
+    h1.innerHTML = ""
+
+    let tipe;
 
     let output = {
         berat: inputKilo.value,
         tinggi: inputCm.value
     }
+
+    console.log(output);
 
     let hasilBMI = output.berat/(output.tinggi/100)^2;
 
@@ -22,15 +26,17 @@ hasil.addEventListener("submit", (event) => {
     // Obesity = BMI of 30 or greater
 
     if (hasilBMI < 18.5) {
-
         tipe = "Underweight"
+    } else if (hasilBMI <= 24.9){
+        tipe = "Normal"
+    } else if (hasilBMI <= 29.9) {
+        tipe = "Overweight"
     } else {
-        console.log("error");
+        tipe = "Obesity"
     }
-
+        
     h1.append("Your BMI is "+ hasilBMI +" which means you are " + tipe )
 
-
-    
-    
+    hasil.reset()
+   
 })

@@ -16,9 +16,12 @@ hasil.addEventListener("submit", (event) => {
         tinggi: inputCm.value
     }
 
-    console.log(output);
 
-    let hasilBMI = output.berat/(output.tinggi/100)^2;
+    beratInt = parseInt(output.berat)
+    tinggiInt = parseInt(output.tinggi)
+
+
+    let hasilBMI = beratInt/(tinggiInt/100)**2;
 
     // Underweight = <18.5
     // Normal weight = 18.5 – 24.9
